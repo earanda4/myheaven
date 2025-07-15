@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love! ❤️</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Gradient background from dark blue to dark purple */
+            background: linear-gradient(to bottom, #0F0F3D, #3A003D, #5A1F5E, #7B437F); /* Dark Blue, Dark Purple, Medium Purple, Lighter Purple */
+            background-attachment: fixed; /* Ensures the gradient stays fixed as you scroll */
+            background-size: 100% 1500px; /* Adjust height to make the gradient stretch and transition smoothly */
+            background-repeat: no-repeat;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 1rem; /* Rounded corners */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Shadow */
+        }
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: 400px; /* Fixed height for consistency */
+            object-fit: cover; /* Cover the area */
+        }
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 9999px; /* Fully rounded */
+            z-index: 10; /* Ensure buttons are above captions */
+        }
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little more opacity */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active-dot, .dot:hover {
+            background-color: #717171;
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+        .slide-caption {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 0.5rem 1rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+
+    <div class="max-w-4xl w-full bg-white p-8 rounded-2xl shadow-xl space-y-10 my-8">
+
+        <!-- Header Section -->
+        <header class="text-center">
+            <h1 class="text-5xl font-extrabold text-purple-700 mb-4 rounded-xl p-4 bg-purple-100 shadow-md">
+                Happy Birthday, My Dearest! 🎉
+            </h1>
+            <p class="text-lg text-gray-700">Celebrating you on your special day!</p>
+        </header>
+
+        <!-- Slideshows Section -->
+        <section class="space-y-12">
+            <h2 class="text-3xl font-bold text-center text-purple-800 mb-6">Our Cherished Memories</h2>
+
+            <!-- Slideshow 1 -->
+            <div class="slideshow-container" id="slideshow1">
+                <img class="mySlides fade" src="https://placehold.co/600x400/FFC0CB/FFFFFF?text=Memory+1" alt="Memory 1">
+                <img class="mySlides fade" src="https://placehold.co/600x400/FFB6C1/FFFFFF?text=Memory+2" alt="Memory 2">
+                <img class="mySlides fade" src="https://placehold.co/600x400/FF69B4/FFFFFF?text=Memory+3" alt="Memory 3">
+                <img class="mySlides fade" src="https://placehold.co/600x400/FF1493/FFFFFF?text=Memory+4" alt="Memory 4">
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                <div class="text-center py-2">
+                    <span class="dot" onclick="currentSlide(1, 0)"></span>
+                    <span class="dot" onclick="currentSlide(2, 0)"></span>
+                    <span class="dot" onclick="currentSlide(3, 0)"></span>
+                    <span class="dot" onclick="currentSlide(4, 0)"></span>
+                </div>
+                <div class="slide-caption">Caption for Memory 1</div>
+            </div>
+
+            <!-- Text section between slideshows -->
+            <div class="text-center p-6 bg-purple-50 rounded-xl shadow-sm border border-purple-200">
+                <h3 class="text-2xl font-semibold text-purple-700 mb-3">Remembering Our First Adventures</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    These photos take me back to the beginning of our journey, full of new discoveries and endless laughter. Every moment with you is an adventure!
+                </p>
+            </div>
+
+            <!-- Slideshow 2 -->
+            <div class="slideshow-container" id="slideshow2">
+                <img class="mySlides fade" src="https://placehold.co/600x400/ADD8E6/FFFFFF?text=Adventure+1" alt="Adventure 1">
+                <img class="mySlides fade" src="https://placehold.co/600x400/87CEEB/FFFFFF?text=Adventure+2" alt="Adventure 2">
+                <img class="mySlides fade" src="https://placehold.co/600x400/6495ED/FFFFFF?text=Adventure+3" alt="Adventure 3">
+                <img class="mySlides fade" src="https://placehold.co/600x400/4169E1/FFFFFF?text=Adventure+4" alt="Adventure 4">
+                <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                <div class="text-center py-2">
+                    <span class="dot" onclick="currentSlide(1, 1)"></span>
+                    <span class="dot" onclick="currentSlide(2, 1)"></span>
+                    <span class="dot" onclick="currentSlide(3, 1)"></span>
+                    <span class="dot" onclick="currentSlide(4, 1)"></span>
+                </div>
+                <div class="slide-caption">Caption for Adventure 1</div>
+            </div>
+
+            <!-- Text section between slideshows -->
+            <div class="text-center p-6 bg-purple-50 rounded-xl shadow-sm border border-purple-200">
+                <h3 class="text-2xl font-semibold text-purple-700 mb-3">Moments of Pure Joy</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    These pictures capture some of the happiest times we've shared. Your smile lights up my world!
+                </p>
+            </div>
+
+            <!-- Slideshow 3 -->
+            <div class="slideshow-container" id="slideshow3">
+                <img class="mySlides fade" src="https://placehold.co/600x400/90EE90/FFFFFF?text=Joyful+Moment+1" alt="Joyful Moment 1">
+                <img class="mySlides fade" src="https://placehold.co/600x400/7CFC00/FFFFFF?text=Joyful+Moment+2" alt="Joyful Moment 2">
+                <img class="mySlides fade" src="https://placehold.co/600x400/32CD32/FFFFFF?text=Joyful+Moment+3" alt="Joyful Moment 3">
+                <img class="mySlides fade" src="https://placehold.co/600x400/008000/FFFFFF?text=Joyful+Moment+4" alt="Joyful Moment 4">
+                <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+                <div class="text-center py-2">
+                    <span class="dot" onclick="currentSlide(1, 2)"></span>
+                    <span class="dot" onclick="currentSlide(2, 2)"></span>
+                    <span class="dot" onclick="currentSlide(3, 2)"></span>
+                    <span class="dot" onclick="currentSlide(4, 2)"></span>
+                </div>
+                <div class="slide-caption">Caption for Joyful Moment 1</div>
+            </div>
+
+            <!-- Text section between slideshows -->
+            <div class="text-center p-6 bg-purple-50 rounded-xl shadow-sm border border-purple-200">
+                <h3 class="text-2xl font-semibold text-purple-700 mb-3">Our Unforgettable Trips</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    From scenic views to cozy evenings, every trip with you is an unforgettable journey. Can't wait for more!
+                </p>
+            </div>
+
+            <!-- Slideshow 4 -->
+            <div class="slideshow-container" id="slideshow4">
+                <img class="mySlides fade" src="https://placehold.co/600x400/FFD700/FFFFFF?text=Happy+Times+1" alt="Happy Times 1">
+                <img class="mySlides fade" src="https://placehold.co/600x400/FFA500/FFFFFF?text=Happy+Times+2" alt="Happy Times 2">
+                <img class="mySlides fade" src="https://placehold.co/600x400/FF8C00/FFFFFF?text=Happy+Times+3" alt="Happy Times 3">
+                <img class="mySlides fade" src="https://placehold.co/600x400/FF4500/FFFFFF?text=Happy+Times+4" alt="Happy Times 4">
+                <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
+                <div class="text-center py-2">
+                    <span class="dot" onclick="currentSlide(1, 3)"></span>
+                    <span class="dot" onclick="currentSlide(2, 3)"></span>
+                    <span class="dot" onclick="currentSlide(3, 3)"></span>
+                    <span class="dot" onclick="currentSlide(4, 3)"></span>
+                </div>
+                <div class="slide-caption">Caption for Happy Times 1</div>
+            </div>
+
+            <!-- Text section between slideshows -->
+            <div class="text-center p-6 bg-purple-50 rounded-xl shadow-sm border border-purple-200">
+                <h3 class="text-2xl font-semibold text-purple-700 mb-3">Everyday Magic with You</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Even the simplest moments become magical when I'm with you. These photos remind me of the beauty in our everyday.
+                </p>
+            </div>
+
+            <!-- Slideshow 5 -->
+            <div class="slideshow-container" id="slideshow5">
+                <img class="mySlides fade" src="https://placehold.co/600x400/DA70D6/FFFFFF?text=Special+Moments+1" alt="Special Moments 1">
+                <img class="mySlides fade" src="https://placehold.co/600x400/BA55D3/FFFFFF?text=Special+Moments+2" alt="Special Moments 2">
+                <img class="mySlides fade" src="https://placehold.co/600x400/9932CC/FFFFFF?text=Special+Moments+3" alt="Special Moments 3">
+                <img class="mySlides fade" src="https://placehold.co/600x400/8A2BE2/FFFFFF?text=Special+Moments+4" alt="Special Moments 4">
+                <a class="prev" onclick="plusSlides(-1, 4)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 4)">&#10095;</a>
+                <div class="text-center py-2">
+                    <span class="dot" onclick="currentSlide(1, 4)"></span>
+                    <span class="dot" onclick="currentSlide(2, 4)"></span>
+                    <span class="dot" onclick="currentSlide(3, 4)"></span>
+                    <span class="dot" onclick="currentSlide(4, 4)"></span>
+                </div>
+                <div class="slide-caption">Caption for Special Moments 1</div>
+            </div>
+        </section>
+
+        <!-- Messages from Friends Section -->
+        <section class="bg-purple-100 p-6 rounded-xl shadow-md border border-purple-300">
+            <h2 class="text-3xl font-bold text-center text-purple-800 mb-6">Messages from Your Wonderful Friends!</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Example Friend Message 1 -->
+                <div class="bg-white p-5 rounded-lg shadow-sm border border-purple-200">
+                    <p class="text-gray-800 italic mb-2">"Happy Birthday! Wishing you a day filled with joy and laughter. You're an amazing friend!"</p>
+                    <p class="text-right font-semibold text-purple-700">- Sarah</p>
+                </div>
+                <!-- Example Friend Message 2 -->
+                <div class="bg-white p-5 rounded-lg shadow-sm border border-purple-200">
+                    <p class="text-gray-800 italic mb-2">"To the most wonderful person, may your birthday be as fantastic as you are! Love you!"</p>
+                    <p class="text-right font-semibold text-purple-700">- David</p>
+                </div>
+                <!-- Example Friend Message 3 -->
+                <div class="bg-white p-5 rounded-lg shadow-sm border border-purple-200">
+                    <p class="text-gray-800 italic mb-2">"Cheers to another year of adventures! Happy Birthday, my dear friend!"</p>
+                    <p class="text-right font-semibold text-purple-700">- Emily</p>
+                </div>
+                <!-- Example Friend Message 4 -->
+                <div class="bg-white p-5 rounded-lg shadow-sm border border-purple-200">
+                    <p class="text-gray-800 italic mb-2">"Wishing you all the happiness in the world on your special day. Happy Birthday!"</p>
+                    <p class="text-right font-semibold text-purple-700">- Michael</p>
+                </div>
+                <!-- Add more friend messages as needed -->
+            </div>
+        </section>
+
+        <!-- Your Personal Message Section -->
+        <section class="bg-purple-50 p-6 rounded-xl shadow-md border border-purple-200">
+            <h2 class="text-3xl font-bold text-center text-purple-700 mb-6">A Special Message Just For You...</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-purple-200">
+                <p class="text-gray-800 leading-relaxed text-lg text-center">
+                    My dearest [Girlfriend's Name],
+                    <br><br>
+                    Happy Birthday to the most incredible person in my life! Every day with you is a gift, and I cherish every moment we share. You bring so much light, love, and joy into my world. Your kindness, strength, and beautiful spirit inspire me constantly.
+                    <br><br>
+                    I hope this special day is filled with all the happiness you deserve, surrounded by love and laughter. Here's to many more adventures, smiles, and beautiful memories together. I love you more than words can say.
+                    <br><br>
+                    With all my love,
+                    <br>
+                    [Your Name]
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-sm mt-8">
+            <p>&copy; 2025 Created with Love ❤️</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Array to hold the slide index for each slideshow
+        let slideIndex = [1, 1, 1, 1, 1];
+        // Array to hold the auto-play timers for each slideshow
+        let slideTimers = [];
+
+        // Captions for each slide in each slideshow
+        const slideCaptions = [
+            ["Our First Date!", "That amazing trip to the mountains.", "Cozy evening by the fireplace.", "Laughing together, always."],
+            ["Exploring new cities.", "Hiking adventures with stunning views.", "Beach day fun!", "Road trip memories."],
+            ["That surprise party!", "Your infectious smile.", "Celebrating small victories.", "Pure happiness captured."],
+            ["Holiday season joy.", "Our favorite coffee shop moments.", "Just us, being silly.", "Unforgettable sunsets."],
+            ["Our anniversary dinner.", "A quiet moment together.", "Building dreams side-by-side.", "Forever in my heart."]
+        ];
+
+        // Initialize all slideshows with auto-play
+        window.onload = function() {
+            for (let i = 0; i < slideIndex.length; i++) {
+                showSlides(1, i);
+                startAutoPlay(i); // Start auto-play for each slideshow
+            }
+        };
+
+        // Start auto-play for a specific slideshow
+        function startAutoPlay(no) {
+            // Clear any existing timer for this slideshow to prevent multiple timers
+            if (slideTimers[no]) {
+                clearInterval(slideTimers[no]);
+            }
+            slideTimers[no] = setInterval(function() {
+                plusSlides(1, no);
+            }, 5000); // Change image every 5 seconds
+        }
+
+        // Next/previous controls
+        function plusSlides(n, no) {
+            // Clear auto-play when user manually navigates
+            clearInterval(slideTimers[no]);
+            showSlides(slideIndex[no] += n, no);
+            startAutoPlay(no); // Restart auto-play after manual navigation
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n, no) {
+            // Clear auto-play when user manually navigates
+            clearInterval(slideTimers[no]);
+            showSlides(slideIndex[no] = n, no);
+            startAutoPlay(no); // Restart auto-play after manual navigation
+        }
+
+        function showSlides(n, no) {
+            let i;
+            // Get all image elements for the current slideshow
+            let slides = document.querySelectorAll(`#slideshow${no + 1} .mySlides`);
+            // Get all dot elements for the current slideshow
+            let dots = document.querySelectorAll(`#slideshow${no + 1} .dot`);
+            // Get the caption element for the current slideshow
+            let captionText = document.querySelector(`#slideshow${no + 1} .slide-caption`);
+
+            if (n > slides.length) {
+                slideIndex[no] = 1; // Loop back to the first slide
+            }
+            if (n < 1) {
+                slideIndex[no] = slides.length; // Loop to the last slide
+            }
+
+            // Hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Deactivate all dots
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-dot", "");
+            }
+
+            // Display the current slide, activate the current dot, and update caption
+            if (slides.length > 0) {
+                slides[slideIndex[no] - 1].style.display = "block";
+            }
+            if (dots.length > 0) {
+                dots[slideIndex[no] - 1].className += " active-dot";
+            }
+            if (captionText && slideCaptions[no] && slideCaptions[no][slideIndex[no] - 1]) {
+                captionText.textContent = slideCaptions[no][slideIndex[no] - 1];
+            }
+        }
+    </script>
+</body>
+</html>

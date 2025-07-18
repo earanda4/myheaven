@@ -15,6 +15,7 @@
             background: linear-gradient(to bottom, #0F0F3D, #3A003D); /* Dark Blue, Dark Purple*/
             background-size: 100% 100%; /* Adjust height to make the gradient stretch and transition smoothly */
             background-repeat: no-repeat;
+            min-height: 100vh; /* Ensures body is at least viewport height */
         }
         .slideshow-container {
             position: relative;
@@ -93,6 +94,10 @@
             border-bottom-right-radius: 1rem;
             font-size: 0.9rem;
         }
+        /* Hidden by default */
+        .hidden-message {
+            display: none;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-4">
@@ -109,9 +114,9 @@
 
         <!-- Slideshows Section -->
         <section class="space-y-12">
-                       <div class="text-center p-6 bg-purple-50 rounded-xl shadow-sm border border-purple-200">
-                        <h3 class="text-2xl font-semibold text-purple-700 mb-3"> My Helen, My Heaven...</h3>
-                       </div>
+                        <div class="text-center p-6 bg-purple-50 rounded-xl shadow-sm border border-purple-200">
+                         <h3 class="text-2xl font-semibold text-purple-700 mb-3"> My Helen, My Heaven...</h3>
+                        </div>
 
             <!-- Slideshow 1 -->
             <div class="slideshow-container" id="slideshow1">
@@ -278,7 +283,12 @@
         <!-- Your Personal Message Section -->
         <section class="bg-purple-50 p-6 rounded-xl shadow-md border border-purple-200">
             <h2 class="text-3xl font-bold text-center text-purple-700 mb-6">A Special Message Just For You...</h2>
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-purple-200">
+            <div class="text-center mb-4">
+                <button id="revealMessageBtn" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    Click to Reveal My Message! ❤️
+                </button>
+            </div>
+            <div id="personalMessageContent" class="hidden-message bg-white p-6 rounded-lg shadow-sm border border-purple-200">
                 <p class="text-gray-800 leading-relaxed text-lg text-center">
                     My dearest [Girlfriend's Name],
                     <br><br>
@@ -321,6 +331,22 @@
                 showSlides(1, i);
                 startAutoPlay(i); // Start auto-play for each slideshow
             }
+
+            // Get the button and message content elements
+            const revealBtn = document.getElementById('revealMessageBtn');
+            const messageContent = document.getElementById('personalMessageContent');
+
+            // Add click event listener to the button
+            revealBtn.addEventListener('click', function() {
+                // Toggle the 'hidden-message' class
+                messageContent.classList.toggle('hidden-message');
+                // Optionally, change button text
+                if (messageContent.classList.contains('hidden-message')) {
+                    revealBtn.textContent = 'Click to Reveal My Message! ❤️';
+                } else {
+                    revealBtn.textContent = 'Message Revealed!';
+                }
+            });
         };
 
         // Start auto-play for a specific slideshow

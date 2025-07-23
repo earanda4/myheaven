@@ -250,32 +250,50 @@
                 </div>
                 <div class="slide-caption">Caption for Special Moments 1</div>
             </div>
+
+            <!-- NEW: Extra Text Box after last slideshow -->
+            <div class="text-center p-6 bg-purple-50 rounded-xl shadow-sm border border-purple-200">
+                <h3 class="text-2xl font-semibold text-purple-700 mb-3">And here's one more thought just for you...</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    You are truly one of a kind, and I am incredibly grateful for every moment we share. This website is just a small token of my immense love and appreciation for you.
+                </p>
+            </div>
+
+            <!-- NEW: Singular Picture Section -->
+            <div class="text-center p-6 bg-purple-100 rounded-xl shadow-md border border-purple-300">
+                <h2 class="text-3xl font-bold text-center text-purple-800 mb-6">A Final Special Image</h2>
+                <div class="max-w-md mx-auto rounded-xl overflow-hidden shadow-lg">
+                    <!-- Replace with your desired final image URL -->
+                    <img src="https://placehold.co/600x400/9932CC/FFFFFF?text=Your+Special+Image" alt="A special final image" class="w-full h-auto rounded-xl object-cover">
+                </div>
+                <p class="text-gray-700 mt-4 italic">"Every picture tells a story, and ours is my favorite."</p>
+            </div>
+
         </section>
 
         <!-- Messages from Friends Section -->
         <section class="bg-purple-100 p-6 rounded-xl shadow-md border border-purple-300">
-            <h2 class="text-3xl font-bold text-center text-purple-800 mb-6">Messages From Your Favorite People</h2>
+            <h2 class="text-3xl font-bold text-center text-purple-800 mb-6">Messages from Your Wonderful Friends!</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Example Friend Message 1 -->
                 <div class="bg-white p-5 rounded-lg shadow-sm border border-purple-200">
-                    <p class="text-gray-800 italic mb-2">"Happy birthday Helen! Turn upppppp!!! Ily and imy have a good birthday! God bless.
-"</p>
-                    <p class="text-right font-semibold text-purple-700">- Rae</p>
+                    <p class="text-gray-800 italic mb-2">"Happy Birthday! Wishing you a day filled with joy and laughter. You're an amazing friend!"</p>
+                    <p class="text-right font-semibold text-purple-700">- Sarah</p>
                 </div>
                 <!-- Example Friend Message 2 -->
                 <div class="bg-white p-5 rounded-lg shadow-sm border border-purple-200">
-                    <p class="text-gray-800 italic mb-2">"Happy Birthday"</p>
-                    <p class="text-right font-semibold text-purple-700">- Noemi</p>
+                    <p class="text-gray-800 italic mb-2">"To the most wonderful person, may your birthday be as fantastic as you are! Love you!"</p>
+                    <p class="text-right font-semibold text-purple-700">- David</p>
                 </div>
                 <!-- Example Friend Message 3 -->
                 <div class="bg-white p-5 rounded-lg shadow-sm border border-purple-200">
-                    <p class="text-gray-800 italic mb-2">"Happy Birthday"</p>
-                    <p class="text-right font-semibold text-purple-700">- Heidi</p>
+                    <p class="text-gray-800 italic mb-2">"Cheers to another year of adventures! Happy Birthday, my dear friend!"</p>
+                    <p class="text-right font-semibold text-purple-700">- Emily</p>
                 </div>
                 <!-- Example Friend Message 4 -->
                 <div class="bg-white p-5 rounded-lg shadow-sm border border-purple-200">
-                    <p class="text-gray-800 italic mb-2">"Happy Birthday"</p>
-                    <p class="text-right font-semibold text-purple-700">- Dave</p>
+                    <p class="text-gray-800 italic mb-2">"Wishing you all the happiness in the world on your special day. Happy Birthday!"</p>
+                    <p class="text-right font-semibold text-purple-700">- Michael</p>
                 </div>
                 <!-- Add more friend messages as needed -->
             </div>
@@ -283,17 +301,23 @@
 
         <!-- Your Personal Message Section -->
         <section class="bg-purple-50 p-6 rounded-xl shadow-md border border-purple-200">
-            <h2 class="text-3xl font-bold text-center text-purple-700 mb-6">A Message From Me</h2>
+            <h2 class="text-3xl font-bold text-center text-purple-700 mb-6">A Special Message Just For You...</h2>
             <div class="text-center mb-4">
                 <button id="revealMessageBtn" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                    Click Me...
+                    Click to Reveal My Message! ❤️
                 </button>
             </div>
             <div id="personalMessageContent" class="hidden-message bg-white p-6 rounded-lg shadow-sm border border-purple-200">
                 <p class="text-gray-800 leading-relaxed text-lg text-center">
-                    Dear Helen,
+                    My dearest [Girlfriend's Name],
+                    <br><br>
+                    Happy Birthday to the most incredible person in my life! Every day with you is a gift, and I cherish every moment we share. You bring so much light, love, and joy into my world. Your kindness, strength, and beautiful spirit inspire me constantly.
+                    <br><br>
+                    I hope this special day is filled with all the happiness you deserve, surrounded by love and laughter. Here's to many more adventures, smiles, and beautiful memories together. I love you more than words can say.
+                    <br><br>
+                    With all my love,
                     <br>
-                    From Enrique
+                    [Your Name]
                 </p>
             </div>
         </section>
@@ -337,9 +361,9 @@
                 messageContent.classList.toggle('hidden-message');
                 // Optionally, change button text
                 if (messageContent.classList.contains('hidden-message')) {
-                    revealBtn.textContent = 'Click Me Again';
+                    revealBtn.textContent = 'Click to Reveal My Message! ❤️';
                 } else {
-                    revealBtn.textContent = 'Good Girl';
+                    revealBtn.textContent = 'Message Revealed!';
                 }
             });
         };
